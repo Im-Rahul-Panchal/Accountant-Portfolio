@@ -11,11 +11,11 @@ export default function Contact() {
   const [formStatus, setFormStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Netlify encoding function
   const encode = (data) => {
     return Object.keys(data)
       .map(
-        (key) =>
-          encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]),
       )
       .join("&");
   };
@@ -29,15 +29,11 @@ export default function Contact() {
     const data = Object.fromEntries(formData);
 
     try {
+      // POST to root (Netlify detects form via hidden static form)
       await fetch("/", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: encode({
-          "form-name": "contact",
-          ...data,
-        }),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...data }),
       });
 
       setFormStatus("success");
@@ -76,9 +72,12 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 px-6 relative overflow-hidden">
-      
-      {/* Hidden Netlify Form (for detection) */}
-      <form name="contact" data-netlify="true" hidden>
+      <form
+        name="contact"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        hidden
+      >
         <input type="text" name="name" />
         <input type="email" name="email" />
         <input type="text" name="subject" />
@@ -93,7 +92,6 @@ export default function Contact() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -149,7 +147,7 @@ export default function Contact() {
         >
           <Card className="bg-gradient-to-br from-white/5 to-white/[0.02] border-white/10 shadow-premium">
             <CardContent className="p-8 md:p-12">
-
+              {/* ✅ Main Contact Form */}
               <form
                 name="contact"
                 method="POST"
@@ -162,7 +160,6 @@ export default function Contact() {
                 <input type="hidden" name="bot-field" />
 
                 <div className="grid md:grid-cols-2 gap-6">
-
                   <div>
                     <Label htmlFor="name" className="text-white mb-2 block">
                       Full Name
@@ -176,7 +173,6 @@ export default function Contact() {
                       className="bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-emerald-500 focus:ring-emerald-500/20"
                     />
                   </div>
-
                   <div>
                     <Label htmlFor="email" className="text-white mb-2 block">
                       Email Address
@@ -190,7 +186,6 @@ export default function Contact() {
                       className="bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-emerald-500 focus:ring-emerald-500/20"
                     />
                   </div>
-
                 </div>
 
                 <div>
@@ -230,7 +225,7 @@ export default function Contact() {
                     "Sending..."
                   ) : (
                     <>
-                      Send Message
+                      Send Message{" "}
                       <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </>
                   )}
@@ -256,9 +251,7 @@ export default function Contact() {
                     <p>Failed to send message. Please try again later.</p>
                   </motion.div>
                 )}
-
               </form>
-
             </CardContent>
           </Card>
         </motion.div>
