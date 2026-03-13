@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+TRANSFORMATION_SUMMARY.md
+PORTFOLIO_GUIDE.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
