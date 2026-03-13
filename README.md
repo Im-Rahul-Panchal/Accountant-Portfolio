@@ -1,16 +1,98 @@
-# React + Vite
+# 🌐 Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive developer portfolio website built using **React, Tailwind CSS, and Framer Motion**.  
+This portfolio showcases projects, skills, and contact information with a clean UI and smooth animations.
 
-Currently, two official plugins are available:
+The website also includes a **working contact form powered by Netlify Forms** for seamless communication.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+👉 [View Live Website](YOUR_LIVE_SITE_LINK)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- ⚡ Modern UI/UX design
+- 🎨 Fully responsive layout
+- ✨ Smooth animations using Framer Motion
+- 📬 Functional contact form (Netlify Forms)
+- 🧩 Modular and reusable components
+- 🌙 Clean dark themed interface
+- 🚀 Optimized for performance
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend**
+
+- React
+- Tailwind CSS
+- Framer Motion
+- Lucide Icons
+
+**Deployment**
+
+- Netlify
+
+---
+
+```
+
+## 📂 Project Structure
+portfolio-website/
+├── public/
+│ └── favicon.ico
+├── src/
+│ ├── components/
+│ │ ├── Navbar.jsx
+│ │ ├── Hero.jsx
+│ │ ├── About.jsx
+│ │ ├── Projects.jsx
+│ │ ├── Skills.jsx
+│ │ └── Contact.jsx
+│ │
+│ ├── components/ui/
+│ │ ├── button.jsx
+│ │ ├── input.jsx
+│ │ ├── textarea.jsx
+│ │ ├── label.jsx
+│ │ └── card.jsx
+│ │
+│ ├── assets/
+│ │ └── images/
+│ │
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
+
+```
+---
+
+## 📬 Contact Form
+
+The contact form is integrated with **Netlify Forms**, allowing users to send messages directly from the website.
+
+Form submissions can be viewed inside the Netlify dashboard.
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+
+cd YOUR_REPO_NAME
+
+npm install
+
+npm run dev
