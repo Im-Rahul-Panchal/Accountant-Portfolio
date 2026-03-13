@@ -29,7 +29,7 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/khushboo-panchal",
+      href: "https://www.linkedin.com/in/khushboo-panchal-08b267217",
       label: "LinkedIn",
     },
     { icon: Twitter, href: "https://www.twitter.com", label: "Twitter" },
