@@ -74,14 +74,20 @@ export default function Contact() {
     <section id="contact" className="py-24 px-6 relative overflow-hidden">
       <form
         name="contact"
+        method="POST"
         data-netlify="true"
         netlify-honeypot="bot-field"
-        hidden
       >
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="text" name="subject" />
-        <textarea name="message"></textarea>
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="bot-field" />
+
+        {/* All your Inputs */}
+        <Input name="name" />
+        <Input name="email" />
+        <Input name="subject" />
+        <Textarea name="message" />
+
+        <Button type="submit">Send</Button>
       </form>
 
       {/* Background */}
