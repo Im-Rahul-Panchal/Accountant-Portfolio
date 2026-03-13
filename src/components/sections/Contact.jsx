@@ -28,19 +28,19 @@ export default function Contact() {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
 
-    try {
-      // POST to root (Netlify detects form via hidden static form)
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...data }),
-      });
+    // try {
+    //   // POST to root (Netlify detects form via hidden static form)
+    //   await fetch("/", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //     body: encode({ "form-name": "contact", ...data }),
+    //   });
 
       setFormStatus("success");
-      form.reset();
-    } catch (error) {
-      setFormStatus("error");
-    } finally {
+    //   form.reset();
+    // } catch (error) {
+    //   setFormStatus("error");
+    // } finally {
       setIsSubmitting(false);
       setTimeout(() => setFormStatus(""), 5000);
     }
@@ -153,7 +153,6 @@ export default function Contact() {
         >
           <Card className="bg-gradient-to-br from-white/5 to-white/[0.02] border-white/10 shadow-premium">
             <CardContent className="p-8 md:p-12">
-              {/* ✅ Main Contact Form */}
               <form
                 name="contact"
                 method="POST"
