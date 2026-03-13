@@ -1,6 +1,6 @@
-# 🌐 Developer Portfolio
+# 🌐 Accountant Portfolio
 
-A modern and responsive developer portfolio website built using **React, Tailwind CSS, and Framer Motion**.  
+A modern and responsive accountant portfolio website built using **React, Tailwind CSS, and Framer Motion**.  
 This portfolio showcases projects, skills, and contact information with a clean UI and smooth animations.
 
 The website also includes a **working contact form powered by Netlify Forms** for seamless communication.
