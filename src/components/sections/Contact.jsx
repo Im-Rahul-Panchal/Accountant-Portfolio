@@ -36,14 +36,14 @@ export default function Contact() {
     //     body: encode({ "form-name": "contact", ...data }),
     //   });
 
-      setFormStatus("success");
+    setFormStatus("success");
     //   form.reset();
     // } catch (error) {
     //   setFormStatus("error");
-    // } finally {
-      setIsSubmitting(false);
-      setTimeout(() => setFormStatus(""), 5000);
-    }
+    // } finally
+
+    setIsSubmitting(false);
+    setTimeout(() => setFormStatus(""), 5000);
   };
 
   const contactInfo = [
