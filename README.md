@@ -9,7 +9,7 @@ The website also includes a **working contact form powered by Netlify Forms** fo
 
 ## 🚀 Live Demo
 
-👉 [View Live Website](YOUR_LIVE_SITE_LINK)
+👉 [View Live Website](https://khushboopanchal.netlify.app/)
 
 ---
 
@@ -89,7 +89,7 @@ Form submissions can be viewed inside the Netlify dashboard.
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git clone https://github.com/Im-Rahul-Panchal/Accountant-Portfolio
 
 cd YOUR_REPO_NAME
 
