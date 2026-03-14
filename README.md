@@ -13,6 +13,33 @@ The website also includes a **working contact form powered by Netlify Forms** fo
 
 ---
 
+# 🖼️ Website Preview
+
+## 🏠 Homepage
+![Homepage](./public/home.png)
+
+---
+
+## 👨‍💻 About Section
+![About](./public/about.png)
+
+---
+
+## 🛠 Skills Section
+![Skills](./public/skills.png)
+
+---
+
+## 📂 Projects Section
+![Projects](./public/projects.png)
+
+---
+
+## 📞 Contact Section
+![Contact](./public/contact.png)
+
+---
+
 ## ✨ Features
 
 - ⚡ Modern UI/UX design
